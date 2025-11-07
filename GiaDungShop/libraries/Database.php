@@ -43,7 +43,7 @@ class Database
     }
     public function update2($sql)
     {
-        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error());
+        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error($this->link));
         return mysqli_affected_rows($this->link);
     }
 
@@ -74,7 +74,7 @@ class Database
 
         $sql .= $set . $where;
 
-        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error());
+        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error($this->link));
 
         return mysqli_affected_rows($this->link);
     }
