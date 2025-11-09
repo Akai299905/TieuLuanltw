@@ -26,38 +26,27 @@ if (isset($product)) {
     <div class="row">
       <div class="col-lg-3">
         <div class="shop__sidebar">
-  <div class="shop__sidebar__accordion">
-    <div class="accordion" id="accordionExample">
-      <div class="card">
-        <div class="card-heading">
-          <a data-toggle="collapse" data-target="#collapseOne" class="font-weight-bold text-uppercase">Danh mục Gia dụng</a>
-        </div>
-
-        <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
-          <div class="card-body">
-            <div class="shop__sidebar__categories">
-              <ul class="list-unstyled mb-0">
-                <li class="mb-2">
-                  <a href="danh-muc.php?id=1" class="text-dark">Dụng cụ nhà bếp</a>
-                </li>
-                <li class="mb-2">
-                  <a href="danh-muc.php?id=2" class="text-dark">Đồ dùng phòng ăn</a>
-                </li>
-                <li class="mb-2">
-                  <a href="danh-muc.php?id=3" class="text-dark">Đồ dùng phòng ngủ</a>
-                </li>
-                <li class="mb-2">
-                  <a href="danh-muc.php?id=4" class="text-dark">Trang trí nhà cửa</a>
-                </li>
-              </ul>
+          <div class="shop__sidebar__accordion">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-heading">
+                  <a data-toggle="collapse" data-target="#collapseOne">Danh mục</a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="shop__sidebar__categories">
+                      <ul class="nice-scroll" tabindex="1" style="overflow-y: hidden; outline: none;">
+                        <?php foreach ($categories as $cate) : ?>
+                          <li><a href="danh-muc.php?id=<?= $cate['id'] ?>"><?= $cate['name'] ?></a></li>
+                        <?php endforeach ?>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
       </div>
       <div class="col-lg-9">
         <div class="row">
