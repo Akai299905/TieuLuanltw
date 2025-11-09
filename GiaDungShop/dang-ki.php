@@ -8,22 +8,22 @@ if (isset($_SESSION['name_id'])) {
 <section class="checkout spad">
     <div class="container">
         <div class="checkout__form">
-            <h4>Register</h4>
+            <h4>Đăng kí</h4>
             <form action="#" method="POST">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 register">
                         <div class="checkout__input">
-                            <p>Name<span>*</span></p>
+                            <p>Tên<span>*</span></p>
                             <input type="text" name="name" class="register_name">
                         </div>
                         <div class="checkout__input">
-                            <p>Address<span>*</span></p>
+                            <p>Địa chỉ<span>*</span></p>
                             <input type="text" placeholder="Street Address" class="checkout__input__add register_address" name="address">
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="checkout__input">
-                                    <p>Phone<span>*</span></p>
+                                    <p>Số điện thoại<span>*</span></p>
                                     <input type="tel" name="phone" class="register_phone">
                                 </div>
                             </div>
@@ -35,10 +35,10 @@ if (isset($_SESSION['name_id'])) {
                             </div>
                         </div>
                         <div class="checkout__input">
-                            <p>Password<span>*</span></p>
+                            <p>Mật khẩu<span>*</span></p>
                             <input type="password" name="password" class="register_password">
                         </div>
-                        <button type="button" class="site-btn" id="register">Save</button>
+                        <button type="button" class="site-btn" id="register">Lưu</button>
                     </div>
                 </div>
             </form>
