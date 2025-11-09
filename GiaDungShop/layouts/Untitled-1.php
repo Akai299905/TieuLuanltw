@@ -3,8 +3,8 @@
 <?php endif ?>
 
 <?php if (isset($_SESSION['name_user'])) : ?>
-  <a href="dang-xuat.php"><i class="fa fa-user"></i>Log out</a>
+  <a href="dang-xuat.php"><i class="fa fa-user"></i>Đăng xuất</a>
 <?php else : ?>
-  <a href="dang-nhap.php?path=<?php echo $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>"><i class="fa fa-user"></i> Login</a>
+  <a href="dang-nhap.php?path=<?php echo $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>"><i class="fa fa-user"></i> Đăng nhập</a>
 <?php endif ?>
 <img src="<?php echo base_url() ?>public/frontend/img/logo.png" alt="">
