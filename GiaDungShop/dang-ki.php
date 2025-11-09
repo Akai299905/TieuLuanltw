@@ -18,7 +18,7 @@ if (isset($_SESSION['name_id'])) {
                         </div>
                         <div class="checkout__input">
                             <p>Địa chỉ<span>*</span></p>
-                            <input type="text" placeholder="Street Address" class="checkout__input__add register_address" name="address">
+                            <input type="text" placeholder="" class="checkout__input__add register_address" name="address">
                         </div>
                         <div class="row">
                             <div class="col-lg-6">

@@ -10,22 +10,22 @@ $data =
 $error = [];
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if ($data['name'] == '') {
-        $error['name'] = "You have not entered the name !!!";
+        $error['name'] = "Bạn không được để trống tên !!!";
     }
 
     if ($data['email'] == '') {
-        $error['email'] = "You have not entered your email name !!!";
+        $error['email'] = "Bạn không được để trống email !!!";
     }
 
     if ($data['content'] == '') {
-        $error['content'] = "You did not enter content !!!";
+        $error['content'] = "Bạn không được để trống nội dung !!!";
     }
 
     //kiểm tra mảng error
     if (empty($error)) {
         $idinsert = $db->insert("feedback", $data);
         if ($idinsert > 0) {
-            echo "<script>alert('Thank you for contacting us.');location.reload()'</script>";
+            echo "<script>alert('Cảm ơn phản hồi của bạn.');location.reload()'</script>";
         } else {
         }
     }
