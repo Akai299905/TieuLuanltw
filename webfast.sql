@@ -66,18 +66,22 @@ CREATE TABLE `category` (
   `level` int(11) NOT NULL DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `category`
 --
 
 INSERT INTO `category` (`id`, `name`, `slug`, `images`, `banner`, `home`, `status`, `level`, `created_at`, `updated_at`) VALUES
-(48, 'Áo nam', 'ao-nam', 'product-1.jpg', '', 0, 1, 0, '2023-06-01 09:37:25', '2023-06-01 09:38:26'),
-(49, 'Quần nam', 'quan-nam', 'product-2.jpg', '', 0, 1, 0, '2023-06-01 09:41:13', '2023-06-01 09:41:13'),
-(50, 'Áo nữ', 'ao-nu', 'product-3.jpg', '', 0, 1, 0, '2023-06-01 09:41:39', '2023-06-01 09:41:39'),
-(51, 'Quần nữ', 'quan-nu', 'product-4.jpg', '', 0, 1, 0, '2023-06-01 09:42:19', '2023-06-01 09:42:19'),
-(52, 'Trẻ em', 'tre-em', 'product-5.jpg', '', 0, 1, 0, '2023-06-01 09:42:56', '2023-06-01 09:42:56');
+(48, 'Áo nam', 'ao-nam', 'product-1.jpg', '', 0, 0, 0, '2023-06-01 09:37:25', '2025-11-09 13:12:20'),
+(49, 'Quần nam', 'quan-nam', 'product-2.jpg', '', 0, 0, 0, '2023-06-01 09:41:13', '2025-11-09 13:12:43'),
+(50, 'Áo nữ', 'ao-nu', 'product-3.jpg', '', 0, 0, 0, '2023-06-01 09:41:39', '2025-11-09 13:12:55'),
+(51, 'Quần nữ', 'quan-nu', 'product-4.jpg', '', 0, 0, 0, '2023-06-01 09:42:19', '2025-11-09 13:13:08'),
+(52, 'Trẻ em', 'tre-em', 'product-5.jpg', '', 0, 0, 0, '2023-06-01 09:42:56', '2025-11-09 13:13:26'),
+(54, 'Dụng cụ nhà bếp', 'dung-cu-nha-bep', 'kitchen.jpg', 'kitchen_banner.jpg', 0, 1, 0, '2025-11-09 13:15:04', '2025-11-09 13:15:04'),
+(55, 'Đồ dùng phòng ngủ', 'do-dung-phong-ngu', 'bedroom.jpg', 'bedroom_banner.jpg', 0, 1, 0, '2025-11-09 13:15:04', '2025-11-09 13:15:04'),
+(56, 'Trang trí nhà cửa', 'trang-tri-nha-cua', 'decor.jpg', 'decor_banner.jpg', 0, 1, 0, '2025-11-09 13:15:04', '2025-11-09 13:15:04');
+
 
 -- --------------------------------------------------------
 
@@ -432,7 +436,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT cho bảng `feedback`
