@@ -48,8 +48,6 @@
                 <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 5%;">Stt</th>
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20%;">Tên khách hàng</th>
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 15%;">Email</th>
-                
-                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 20%;">Tiêu đề</th>
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 30%;">Nội dung</th>
             </tr>
         </thead>
@@ -59,8 +57,6 @@
                 <td><?php echo $stt ?></td>
                 <td><?php echo $item['name'] ?></td>
                 <td><?php echo $item['email'] ?></td>
-                
-                <td><?php echo $item['title'] ?></td>
                 <td><?php echo $item['content'] ?></td>
                 <td> <a class="btn btn-xs btn-danger" href="delete.php?id= <?php echo $item['id'] ?>"> <i class="fa fa-times"></i>Xóa</a> </td>
             </tr>
