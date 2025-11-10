@@ -73,15 +73,12 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `slug`, `images`, `banner`, `home`, `status`, `level`, `created_at`, `updated_at`) VALUES
-(48, 'Áo nam', 'ao-nam', 'product-1.jpg', '', 0, 0, 0, '2023-06-01 09:37:25', '2025-11-09 13:12:20'),
-(49, 'Quần nam', 'quan-nam', 'product-2.jpg', '', 0, 0, 0, '2023-06-01 09:41:13', '2025-11-09 13:12:43'),
-(50, 'Áo nữ', 'ao-nu', 'product-3.jpg', '', 0, 0, 0, '2023-06-01 09:41:39', '2025-11-09 13:12:55'),
-(51, 'Quần nữ', 'quan-nu', 'product-4.jpg', '', 0, 0, 0, '2023-06-01 09:42:19', '2025-11-09 13:13:08'),
-(52, 'Trẻ em', 'tre-em', 'product-5.jpg', '', 0, 0, 0, '2023-06-01 09:42:56', '2025-11-09 13:13:26'),
-(54, 'Dụng cụ nhà bếp', 'dung-cu-nha-bep', 'kitchen.jpg', 'kitchen_banner.jpg', 0, 1, 0, '2025-11-09 13:15:04', '2025-11-09 13:15:04'),
-(55, 'Đồ dùng phòng ngủ', 'do-dung-phong-ngu', 'bedroom.jpg', 'bedroom_banner.jpg', 0, 1, 0, '2025-11-09 13:15:04', '2025-11-09 13:15:04'),
-(56, 'Trang trí nhà cửa', 'trang-tri-nha-cua', 'decor.jpg', 'decor_banner.jpg', 0, 1, 0, '2025-11-09 13:15:04', '2025-11-09 13:15:04');
-
+(1, 'Dụng cụ nhà bếp', 'dung-cu-nha-bep', 'kitchen.jpg', 'kitchen_banner.jpg', 0, 1, 0, NOW(), NOW()),
+(2, 'Thiết bị điện gia đình', 'thiet-bi-dien-gia-dinh', 'electronics.jpg', 'electronics_banner.jpg', 0, 1, 0, NOW(), NOW()),
+(3, 'Đồ dùng phòng tắm', 'do-dung-phong-tam', 'bathroom.jpg', 'bathroom_banner.jpg', 0, 1, 0, NOW(), NOW()),
+(4, 'Đồ dùng phòng ngủ','do-dung-phong-ngu', 'bedroom.jpg', 'bedroom_banner.jpg', 0, 1, 0, NOW(), NOW()),
+(5, 'Trang trí nhà cửa', 'trang-tri-nha-cua', 'decor.jpg', 'decor_banner.jpg', 0, 1, 0, NOW(), NOW()),
+(6, 'Vệ sinh – Giặt ủi', 've-sinh-giat-ui', 'cleaning.jpg', 'cleaning_banner.jpg', 0, 1, 0, NOW(), NOW());
 
 -- --------------------------------------------------------
 
@@ -120,17 +117,7 @@ CREATE TABLE `orders` (
 -- Đang đổ dữ liệu cho bảng `orders`
 --
 
-INSERT INTO `orders` (`id`, `transaction_id`, `product_id`, `qty`, `size`, `color`, `price`, `created_at`, `updated_at`) VALUES
-(148, 83, 222, 1, 'XXL', 'Đen', 305000, '2023-06-08 11:13:17', '2023-06-08 11:13:17'),
-(149, 83, 222, 1, 'XXL', 'Xanh', 305000, '2023-06-08 11:13:17', '2023-06-08 11:13:17'),
-(150, 83, 222, 1, 'XXL', 'Vàng', 305000, '2023-06-08 11:13:17', '2023-06-08 11:13:17'),
-(151, 84, 223, 1, 'XXL', 'Đen', 270750, '2023-06-08 11:14:18', '2023-06-08 11:14:18'),
-(152, 85, 223, 1, 'XXL', 'Đen', 270750, '2023-06-08 11:14:29', '2023-06-08 11:14:29'),
-(153, 87, 222, 1, 'XXL', 'Đen', 305000, '2023-06-12 01:51:13', '2023-06-12 01:51:13'),
-(154, 87, 222, 1, 'XXL', 'Xanh', 305000, '2023-06-12 01:51:13', '2023-06-12 01:51:13'),
-(155, 88, 222, 1, 'XXL', 'Đen', 305000, '2023-06-18 18:15:57', '2023-06-18 18:15:57'),
-(156, 91, 223, 1, 'XXL', 'Đen', 270750, '2023-07-15 12:02:32', '2023-07-15 12:02:32'),
-(157, 91, 226, 2, 'XL', 'Đen', 590000, '2023-07-15 12:02:32', '2023-07-15 12:02:32');
+
 
 -- --------------------------------------------------------
 
@@ -162,13 +149,47 @@ CREATE TABLE `product` (
 -- Đang đổ dữ liệu cho bảng `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `slug`, `price`, `sale`, `thundar`, `rated`, `comment`, `category_id`, `content`, `head`, `view`, `hot`, `number`, `status`, `create_at`, `update_at`) VALUES
-(222, 'Áo Sơ Mi Nam Trơn Tay Dài Mac Fm', 'ao-so-mi-nam-tron-tay-dai-mac-fm', 305000, 0, NULL, 0, 0, 48, '- Tên sản phẩm: Áo Sơ Mi Nam Trơn Mac FM\r\n\r\n- Độ tuổi: > 13 tuổi\r\n\r\n- Phù hợp: Mặc đi làm, đi học, đi chơi.\r\n\r\n- Chất liệu: Vải kate\r\n\r\n- Màu sắc: Đen/ Trắng/ Xám nhạt/ Xám đậm\r\n\r\n- Họa tiết: Trơn\r\n\r\n- Xuất xứ: Tự thiết kế và sản xuất bởi FM Style tại Việt Nam \r\n\r\n- Cam kết 100% chất lượng từ chất vải đến đường chỉ, phát hiện lỗi được hoàn trả miễn phí.\r\n\r\n- Size L: Chiều cao 160 - 167cm, nặng <65kg\r\n\r\n- Size XL: Chiều cao 167 - 175cm, nặng 65 - 69kg\r\n\r\n- Size 2XL: Chiều cao 167 - 180cm, nặng 65 - 70kg\r\n\r\nHướng dẫn chọn size ở trên chỉ mang tính chất tham khảo tương đối, tuỳ vào chiều cao và số đo cơ thể mà bạn có thể thay đổi để chọn đúng size sản phẩm phù hợp.\r\n\r\nHàng có size L, XL, 2XL, khách hàng vui lòng ghi rõ size cần chọn vào ghi chú đơn hàng.', 0, 0, 0, 89, 1, '2023-06-01 09:45:44', '2023-06-01 09:45:44'),
-(223, 'Áo Sơ Mi Nam Kaki Mac Fm', 'ao-so-mi-nam-kaki-mac-fm', 285000, 5, NULL, 0, 0, 48, '- Tên sản phẩm: Áo Sơ Mi Nam Kaki Mac FM\r\n\r\n- Độ tuổi: > 13 tuổi\r\n\r\n- Phù hợp: Mặc đi làm, đi học, đi chơi.\r\n\r\n- Chất liệu: Vải kate\r\n\r\n- Màu sắc: Đen/ Trắng/ Be\r\n\r\n- Họa tiết: Trơn\r\n\r\n- Xuất xứ: Tự thiết kế và sản xuất bởi FM Style tại Việt Nam \r\n\r\n- Cam kết 100% chất lượng từ chất vải đến đường chỉ, phát hiện lỗi được hoàn trả miễn phí.', 0, 0, 0, 99, 1, '2023-06-01 09:48:00', '2023-06-01 09:48:00'),
-(224, '2303kka8881601', '2303kka8881601', 399000, 0, NULL, 5, 1, 48, '- Tên sản phẩm: Áo Sơ Mi Nam Kaki Mac FM\r\n\r\n- Độ tuổi: > 13 tuổi\r\n\r\n- Phù hợp: Mặc đi làm, đi học, đi chơi.\r\n\r\n- Chất liệu: Vải kate\r\n\r\n- Màu sắc: Đen/ Trắng/ Be\r\n\r\n- Họa tiết: Trơn\r\n\r\n- Xuất xứ: Tự thiết kế và sản xuất bởi FM Style tại Việt Nam \r\n\r\n- Cam kết 100% chất lượng từ chất vải đến đường chỉ, phát hiện lỗi được hoàn trả miễn phí.', 0, 0, 0, 40, 1, '2023-06-01 09:50:15', '2023-06-01 09:50:15'),
-(225, 'Quần Kaki Nam Dài Mac Fm', 'quan-kaki-nam-dai-mac-fm', 355000, 0, NULL, 0, 0, 49, '- Tên sản phẩm: Quần Kaki Nam Dài Mac FM\r\n\r\n- Độ tuổi: > 13 tuổi\r\n\r\n- Phù hợp: Mặc đi chơi, tập thể thao, ở nhà.\r\n\r\n- Chất liệu: Vải kaki\r\n\r\n- Màu sắc: Đen/ Be/ Xám\r\n\r\n- Họa tiết: Trơn\r\n\r\n- Xuất xứ: Tự thiết kế và sản xuất bởi FM Style tại Việt Nam \r\n\r\n- Cam kết 100% chất lượng từ chất vải đến đường chỉ, phát hiện lỗi được hoàn trả miễn phí.', 0, 0, 0, 93, 1, '2023-06-01 10:02:46', '2023-06-01 10:02:46'),
-(226, 'Quần Kaki Nam Dài', 'quan-kaki-nam-dai', 295000, 0, NULL, 0, 0, 49, '- Tên sản phẩm: Quần Kaki Nam Dài Mac FM  - Độ tuổi: > 13 tuổi  - Phù hợp: Mặc đi chơi, tập thể thao, ở nhà.  - Chất liệu: Vải kaki  - Màu sắc: Đen/ Be/ Xám  - Họa tiết: Trơn  - Xuất xứ: Tự thiết kế và sản xuất bởi FM Style tại Việt Nam   - Cam kết 100% chất lượng từ chất vải đến đường chỉ, phát hiện lỗi được hoàn trả miễn phí.', 0, 0, 0, 58, 1, '2023-06-01 10:06:06', '2023-06-01 10:06:06');
+INSERT INTO product (id, name, slug, price, sale, thundar, rated, comment, category_id, content, head, view, hot, number, status, create_at, update_at) VALUES
+(1, 'Nồi cơm điện Sunhouse 1.8L', 'noi-com-sunhouse', 720000, 0, 'pro-1.jpg', 0, 0, 1, 'Nồi cơm điện dung tích 1.8L, chống dính, giữ ấm lâu.', 0, 0, 0, 20, 1, NOW(), NOW()),
+(2, 'Chảo chống dính Elmich 26cm', 'chao-elmich-26cm', 420000, 0, 'pro-2.jpg', 0, 0, 1, 'Chảo chống dính cao cấp, đáy từ, dùng cho mọi loại bếp.', 0, 0, 0, 25, 1, NOW(), NOW()),
+(3, 'Máy xay sinh tố Sharp 400W', 'may-xay-sharp', 650000, 0, 'pro-4.jpg', 0, 0, 1, 'Lưỡi dao inox 4 cánh, cối thủy tinh, xay được đá.', 0, 0, 0, 15, 1, NOW(), NOW()),
+(4, 'Bộ nồi inox 5 món Elmich', 'bo-noi-inox-5-mon', 1200000, 10, 'pro-6.jpg', 0, 0, 1, 'Bộ nồi inox 5 món, bền bỉ, dùng được cho mọi loại bếp.', 0, 0, 0, 12, 1, NOW(), NOW()),
+(5, 'Bình đun siêu tốc Philips 1.7L', 'binh-dun-philips', 490000, 0, 'pro-3.jpg', 0, 0, 1, 'Công suất 2000W, tự ngắt khi sôi, vỏ inox.', 0, 0, 0, 18, 1, NOW(), NOW()),
 
+-- Thiết bị điện gia đình (category_id = 2)
+(6, 'Lò vi sóng Toshiba 20L', 'lo-vi-song-toshiba', 1750000, 0, 'pro-5.jpg', 0, 0, 2, 'Có chế độ nướng và hẹn giờ tiện dụng.', 0, 0, 0, 10, 1, NOW(), NOW()),
+(7, 'Quạt điện Mitsubishi 45W', 'quat-dien-mitsubishi', 350000, 0, 'pro-7.jpg', 0, 0, 2, 'Quạt đứng 3 tốc độ, hoạt động êm ái.', 0, 0, 0, 20, 1, NOW(), NOW()),
+(8, 'Máy hút bụi Electrolux 1200W', 'may-hut-bui-electrolux', 2100000, 0, 'pro-8.jpg', 0, 0, 2, 'Công suất 1200W, hút sạch bụi và lông thú.', 0, 0, 0, 8, 1, NOW(), NOW()),
+(9, 'Bình nóng lạnh Ariston 15L', 'binh-nong-lanh-ariston', 3200000, 0, 'pro-9.jpg', 0, 0, 2, 'Dung tích 15L, an toàn, tiết kiệm điện.', 0, 0, 0, 5, 1, NOW(), NOW()),
+(10, 'Tủ lạnh mini Aqua 90L', 'tu-lanh-mini-aqua', 2850000, 0, 'pro-10.jpg', 0, 0, 2, 'Tủ lạnh mini, phù hợp gia đình nhỏ.', 0, 0, 0, 7, 1, NOW(), NOW()),
+
+-- Đồ dùng phòng tắm (category_id = 3)
+(11, 'Bồn cầu Inax 2 khối', 'bon-cau-inax', 2200000, 0, 'pro-11.jpg', 0, 0, 3, 'Bồn cầu Inax, tiết kiệm nước, dễ vệ sinh.', 0, 0, 0, 10, 1, NOW(), NOW()),
+(12, 'Bộ vòi sen Grohe', 'voi-sen-grohe', 950000, 0, 'pro-12.jpg', 0, 0, 3, 'Vòi sen Grohe cao cấp, chống gỉ sét.', 0, 0, 0, 15, 1, NOW(), NOW()),
+(13, 'Gương phòng tắm 50x70', 'guong-phong-tam', 350000, 0, 'pro-13.jpg', 0, 0, 3, 'Gương treo tường, khung inox sáng bóng.', 0, 0, 0, 20, 1, NOW(), NOW()),
+(14, 'Kệ để đồ nhà tắm 3 tầng', 'ke-de-do-nha-tam', 420000, 0, 'pro-14.jpg', 0, 0, 3, 'Kệ nhựa 3 tầng, chịu lực tốt, chống nước.', 0, 0, 0, 18, 1, NOW(), NOW()),
+(15, 'Bàn chải điện Oral-B', 'ban-chai-dien-oralb', 780000, 0, 'pro-15.jpg', 0, 0, 3, 'Bàn chải điện, làm sạch răng hiệu quả.', 0, 0, 0, 12, 1, NOW(), NOW()),
+
+-- Đồ dùng phòng ngủ (category_id = 4)
+(16, 'Chăn lông vũ 2m x 2.2m', 'chan-long-vu', 800000, 5, 'pro-16.jpg', 0, 0, 4, 'Chăn mềm mại, giữ ấm tốt, phù hợp mọi mùa.', 0, 0, 0, 10, 1, NOW(), NOW()),
+(17, 'Gối cao su non Everon', 'goi-cao-su-non', 350000, 0, 'pro-17.jpg', 0, 0, 4, 'Gối ôm, nâng đỡ cổ, giảm đau vai gáy.', 0, 0, 0, 20, 1, NOW(), NOW()),
+(18, 'Bộ drap giường cotton 1.6m', 'drap-giuong-cotton', 500000, 0, 'pro-18.jpg', 0, 0, 4, 'Drap giường mềm mại, thấm hút tốt.', 0, 0, 0, 15, 1, NOW(), NOW()),
+(19, 'Tủ đầu giường 2 ngăn', 'tu-dau-giuong', 1200000, 0, 'pro-19.jpg', 0, 0, 4, 'Tủ đầu giường gỗ MDF, màu sáng, tiện dụng.', 0, 0, 0, 8, 1, NOW(), NOW()),
+(20, 'Đèn ngủ LED cảm ứng', 'den-ngu-led', 250000, 0, 'pro-20.jpg', 0, 0, 4, 'Đèn ngủ LED tiết kiệm điện, ánh sáng dịu.', 0, 0, 0, 25, 1, NOW(), NOW()),
+
+-- Trang trí nhà cửa (category_id = 5)
+(21, 'Tranh treo tường phong cảnh', 'tranh-treo-tuong', 550000, 0, 'pro-21.jpg', 0, 0, 5, 'Tranh phong cảnh in trên canvas, khung gỗ tự nhiên.', 0, 0, 0, 15, 1, NOW(), NOW()),
+(22, 'Bình hoa sứ cao 30cm', 'binh-hoa-su', 320000, 0, 'pro-22.jpg', 0, 0, 5, 'Bình hoa sứ trơn, họa tiết nhẹ nhàng.', 0, 0, 0, 20, 1, NOW(), NOW()),
+(23, 'Đèn bàn trang trí', 'den-ban-trang-tri', 450000, 0, 'pro-23.jpg', 0, 0, 5, 'Đèn bàn ánh sáng vàng, tạo không gian ấm áp.', 0, 0, 0, 12, 1, NOW(), NOW()),
+(24, 'Kệ sách treo tường', 'ke-sach-treo-tuong', 600000, 0, 'pro-24.jpg', 0, 0, 5, 'Kệ sách treo tường bằng gỗ MDF, tiện dụng.', 0, 0, 0, 10, 1, NOW(), NOW()),
+(25, 'Thảm trải sàn phòng khách', 'tham-trai-san', 700000, 0, 'pro-25.jpg', 0, 0, 5, 'Thảm trải sàn chất liệu mềm mại, chống trượt.', 0, 0, 0, 8, 1, NOW(), NOW()),
+
+-- Vệ sinh – Giặt ủi (category_id = 6)
+(26, 'Bộ lau nhà 360 độ', 'bo-lau-nha-360', 350000, 0, 'pro-26.jpg', 0, 0, 6, 'Bộ lau nhà xoay 360 độ, tiện lợi và nhanh khô.', 0, 0, 0, 25, 1, NOW(), NOW()),
+(27, 'Máy giặt mini 7kg', 'may-giat-mini', 4500000, 0, 'pro-27.jpg', 0, 0, 6, 'Máy giặt mini 7kg, phù hợp gia đình nhỏ.', 0, 0, 0, 8, 1, NOW(), NOW()),
+(28, 'Bàn ủi hơi nước Philips', 'ban-ui-hoi-nuoc', 650000, 0, 'pro-28.jpg', 0, 0, 6, 'Bàn ủi hơi nước, ủi quần áo nhanh và mượt.', 0, 0, 0, 12, 1, NOW(), NOW()),
+(29, 'Giẻ lau đa năng', 'gie-lau-da-nang', 120000, 0, 'pro-29.jpg', 0, 0, 6, 'Giẻ lau sợi microfiber, hút nước tốt.', 0, 0, 0, 30, 1, NOW(), NOW()),
+(30, 'Xô đựng nước 10L', 'xo-dung-nuoc', 150000, 0, 'pro-30.jpg', 0, 0, 6, 'Xô nhựa chịu lực, dung tích 10L.', 0, 0, 0, 20, 1, NOW(), NOW());
 -- --------------------------------------------------------
 
 --
@@ -204,26 +225,36 @@ CREATE TABLE `product_images` (
 --
 
 INSERT INTO `product_images` (`id`, `product_id`, `image`, `created_at`, `updated_at`) VALUES
-(21, 222, 'pro-1.jpg', NULL, NULL),
-(22, 222, 'pro-2.jpg', NULL, NULL),
-(23, 222, 'pro-3.jpg', NULL, NULL),
-(24, 222, 'pro-4.jpg', NULL, NULL),
-(25, 223, 'pro-8.jpg', NULL, NULL),
-(26, 223, 'pro-7.jpg', NULL, NULL),
-(27, 223, 'pro-6.jpg', NULL, NULL),
-(28, 223, 'pro-5.jpg', NULL, NULL),
-(29, 224, 'pro-12.jpg', NULL, NULL),
-(30, 224, 'pro-11.jpg', NULL, NULL),
-(31, 224, 'pro-10.jpg', NULL, NULL),
-(32, 224, 'pro-9.jpg', NULL, NULL),
-(33, 225, 'pro-16.jpg', NULL, NULL),
-(34, 225, 'pro-15.jpg', NULL, NULL),
-(35, 225, 'pro-14.jpg', NULL, NULL),
-(36, 225, 'pro-13.jpg', NULL, NULL),
-(37, 226, 'pro-20.jpg', NULL, NULL),
-(38, 226, 'pro-19.jpg', NULL, NULL),
-(39, 226, 'pro-18.jpg', NULL, NULL),
-(40, 226, 'pro-17.jpg', NULL, NULL);
+(1, 1, 'pro-1.jpg', NOW(), NOW()),
+(2, 2, 'pro-2.jpg', NOW(), NOW()),
+(3, 3, 'pro-3.jpg', NOW(), NOW()),
+(4, 4, 'pro-4.jpg', NOW(), NOW()),
+(5, 5, 'pro-5.jpg', NOW(), NOW()),
+(6, 6, 'pro-6.jpg', NOW(), NOW()),
+(7, 7, 'pro-7.jpg', NOW(), NOW()),
+(8, 8, 'pro-8.jpg', NOW(), NOW()),
+(9, 9, 'pro-9.jpg', NOW(), NOW()),
+(10, 10, 'pro-10.jpg', NOW(), NOW()),
+(11, 11, 'pro-11.jpg', NOW(), NOW()),
+(12, 12, 'pro-12.jpg', NOW(), NOW()),
+(13, 13, 'pro-13.jpg', NOW(), NOW()),
+(14, 14, 'pro-14.jpg', NOW(), NOW()),
+(15, 15, 'pro-15.jpg', NOW(), NOW()),
+(16, 16, 'pro-16.jpg', NOW(), NOW()),
+(17, 17, 'pro-17.jpg', NOW(), NOW()),
+(18, 18, 'pro-18.jpg', NOW(), NOW()),
+(19, 19, 'pro-19.jpg', NOW(), NOW()),
+(20, 20, 'pro-20.jpg', NOW(), NOW()),
+(21, 21, 'pro-21.jpg', NOW(), NOW()),
+(22, 22, 'pro-22.jpg', NOW(), NOW()),
+(23, 23, 'pro-23.jpg', NOW(), NOW()),
+(24, 24, 'pro-24.jpg', NOW(), NOW()),
+(25, 25, 'pro-25.jpg', NOW(), NOW()),
+(26, 26, 'pro-26.jpg', NOW(), NOW()),
+(27, 27, 'pro-27.jpg', NOW(), NOW()),
+(28, 28, 'pro-28.jpg', NOW(), NOW()),
+(29, 29, 'pro-29.jpg', NOW(), NOW()),
+(30, 30, 'pro-30.jpg', NOW(), NOW());
 
 -- --------------------------------------------------------
 
@@ -246,7 +277,7 @@ CREATE TABLE `rated` (
 --
 
 INSERT INTO `rated` (`id`, `id_product`, `id_users`, `comment`, `rated`, `created_at`, `updated_at`) VALUES
-(61, 224, 33, 'Áo đẹp', 5, '2023-06-01 09:50:43', '2023-06-01 09:50:43');
+(1, 3, 33, 'Xịn xứng đáng giá tiền', 5, '2025-06-01 09:50:43', '2025-06-01 09:50:43');
 
 -- --------------------------------------------------------
 
@@ -531,3 +562,6 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
