@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 10, 2025 lúc 06:23 PM
+-- Thời gian đã tạo: Th10 10, 2025 lúc 07:18 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
--- Phiên bản PHP: 8.2.12
+-- Phiên bản PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,8 +46,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `address`, `email`, `password`, `phone`, `status`, `level`, `avatar`, `create_at`, `update_at`) VALUES
-(12, 'Admin', 'K123/14 Đỗ Thúc Tịnh, Cẩm Lệ, Đà Nẵng', 'admin@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0778960401', 1, 2, NULL, '2022-06-12 09:55:53', '2022-06-12 09:55:53'),
-(13, 'Organic Water', 'K123/14 Đà Nẵng', 'admin2@gmail.com', 'c8837b23ff8aaa8a2dde915473ce0991', '0778960403', 1, 1, NULL, '2023-05-19 08:02:59', '2023-05-19 08:02:59');
+(12, 'Admin', '24D, Mỹ Phú, Tân Hội, tp Vĩnh Long, Vĩnh Long', 'admin@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '0938273149', 1, 2, NULL, '2022-06-12 09:55:53', '2022-06-12 09:55:53');
 
 -- --------------------------------------------------------
 
@@ -146,7 +145,7 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`id`, `name`, `slug`, `price`, `sale`, `thundar`, `rated`, `comment`, `category_id`, `content`, `head`, `view`, `hot`, `number`, `status`, `create_at`, `update_at`) VALUES
 (1, 'Nồi cơm điện Sunhouse 1.8L', 'noi-com-sunhouse', 720000, 0, 'pro-1.jpg', 0, 0, 1, 'Nồi cơm điện dung tích 1.8L, chống dính, giữ ấm lâu.', 0, 0, 0, 20, 1, '2025-11-10 12:53:34', '2025-11-10 12:53:34'),
 (2, 'Chảo chống dính Elmich 26cm', 'chao-elmich-26cm', 420000, 0, 'pro-2.jpg', 0, 0, 1, 'Chảo chống dính cao cấp, đáy từ, dùng cho mọi loại bếp.', 0, 0, 0, 25, 1, '2025-11-10 12:53:34', '2025-11-10 12:53:34'),
-(3, 'Máy xay sinh tố Sharp 400W', 'may-xay-sharp', 650000, 0, 'pro-4.jpg', 0, 0, 1, 'Lưỡi dao inox 4 cánh, cối thủy tinh, xay được đá.', 0, 0, 0, 15, 1, '2025-11-10 12:53:34', '2025-11-10 12:53:34'),
+(3, 'Máy xay sinh tố Sharp 400W', 'may-xay-sharp', 650000, 0, 'pro-4.jpg', 5, 1, 1, 'Lưỡi dao inox 4 cánh, cối thủy tinh, xay được đá.', 0, 0, 0, 15, 1, '2025-11-10 12:53:34', '2025-11-10 12:53:34'),
 (4, 'Bộ nồi inox 5 món Elmich', 'bo-noi-inox-5-mon', 1200000, 10, 'pro-6.jpg', 0, 0, 1, 'Bộ nồi inox 5 món, bền bỉ, dùng được cho mọi loại bếp.', 0, 0, 0, 12, 1, '2025-11-10 12:53:34', '2025-11-10 12:53:34'),
 (5, 'Bình đun siêu tốc Philips 1.7L', 'binh-dun-philips', 490000, 0, 'pro-3.jpg', 0, 0, 1, 'Công suất 2000W, tự ngắt khi sôi, vỏ inox.', 0, 0, 0, 18, 1, '2025-11-10 12:53:34', '2025-11-10 12:53:34'),
 (6, 'Lò vi sóng Toshiba 20L', 'lo-vi-song-toshiba', 1750000, 0, 'pro-5.jpg', 0, 0, 2, 'Có chế độ nướng và hẹn giờ tiện dụng.', 0, 0, 0, 10, 1, '2025-11-10 12:53:34', '2025-11-10 12:53:34'),
@@ -302,21 +301,6 @@ CREATE TABLE `transaction` (
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Đang đổ dữ liệu cho bảng `transaction`
---
-
-INSERT INTO `transaction` (`id`, `amount`, `users_id`, `name`, `email`, `phone`, `address`, `status`, `payment_method`, `created_at`, `updated_at`) VALUES
-(83, 915000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 0, 2, '2023-06-08 11:13:17', '2023-07-15 15:57:20'),
-(84, 270750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 0, 2, '2023-06-08 11:14:18', '2023-07-15 15:57:22'),
-(85, 270750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 2, '2023-06-08 11:14:29', '2023-07-15 15:57:59'),
-(86, 0, 33, 'Organic Water', 'admin1@gmail.com', '0778960422', 'Hà Nội', 2, 1, '2023-06-12 01:50:50', '2023-07-15 15:57:30'),
-(87, 610000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2023-06-12 01:51:13', '2023-06-12 01:51:27'),
-(88, 305000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2023-05-22 18:15:57', '2023-07-15 11:20:32'),
-(89, 0, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 1, '2023-06-30 15:28:50', '2023-07-15 15:41:26'),
-(90, 0, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2023-06-30 15:28:52', '2023-07-15 15:38:44'),
-(91, 860750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 1, '2023-07-15 12:02:32', '2023-07-15 15:35:30');
-
 -- --------------------------------------------------------
 
 --
@@ -343,7 +327,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `address`, `password`, `avatar`, `status`, `created_at`, `update_at`) VALUES
 (33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 'c8837b23ff8aaa8a2dde915473ce0991', '', 1, '2023-05-23 03:32:42', '2023-05-23 03:32:42'),
 (37, 'Organic Water', 'thongit109@gmail.com', '0778960403', 'K123/14 Đỗ Thúc Tịnh', 'c8837b23ff8aaa8a2dde915473ce0991', NULL, 1, '2023-06-09 06:57:26', '2023-06-09 06:57:26'),
-(38, 'nhuy', 'y@gmail.com', NULL, 'vinh long 123', 'e10adc3949ba59abbe56e057f20f883e', NULL, 1, '2025-11-10 16:37:52', '2025-11-10 16:37:52');
+(38, 'nhuy', 'y@gmail.com', NULL, 'vinh long 123', 'e10adc3949ba59abbe56e057f20f883e', NULL, 1, '2025-11-10 16:37:52', '2025-11-10 16:37:52'),
+(39, 'Lê Trung Hậu', 'anhkhoalez345@gmail.com', '0938273149', '24D, Mỹ Phú, Tân Hội, tp Vĩnh Long, Vĩnh Long', 'e10adc3949ba59abbe56e057f20f883e', NULL, 1, '2025-11-10 17:27:09', '2025-11-10 17:27:09');
 
 -- --------------------------------------------------------
 
@@ -356,13 +341,6 @@ CREATE TABLE `wishlist` (
   `user_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `wishlist`
---
-
-INSERT INTO `wishlist` (`id`, `user_id`, `product_id`) VALUES
-(5, 38, 2);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -514,7 +492,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT cho bảng `wishlist`
