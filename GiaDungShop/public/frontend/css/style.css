@@ -622,6 +622,7 @@ ol {
 	position: relative;
 	top: 4px;
 	font-weight: 700;
+	margin-top: 25px;
 }
 
 .hero__social {
@@ -1699,7 +1700,7 @@ ol {
 	border-radius: 50%;
 	position: relative;
 	margin-right: 10px;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 	display: inline-block;
 	cursor: pointer;
 }
@@ -1744,6 +1745,7 @@ ol {
 
 .product__details__cart__option {
 	margin-bottom: 25px;
+	text-align: center;
 }
 
 .product__details__cart__option .quantity {

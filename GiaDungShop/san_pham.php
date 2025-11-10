@@ -87,25 +87,7 @@ if ($count > 0) {
                      <span> - <?= $count ?> Bình luận</span>
                   </div>
                   <h3><?= formatPrice(formatSale($item['price'], $item['sale'])) ?> đ<?php if ($item['sale'] > 0) : ?><span><?= formatPrice($item['price']) ?> đ</span><?php endif ?></h3>
-                  <div class="product__details__option">
-                     <div class="product__details__option__size">
-                        <span>Kích thước:</span>
-                        <label for="XXL">XXL
-                           <input type="radio" id="XXL" name="size" class="size" value="XXL">
-                        </label>
-                        <label for="XL">XL
-                           <input type="radio" id="XL" name="size" class="size" value="XL">
-                        </label>
-                        <label for="L">L
-                           <input type="radio" id="L" name="size" class="size" value="L">
-                        </label>
-                        <label for="M">M
-                           <input type="radio" id="M" name="size" class="size" value="M">
-                        </label>
-                        <label for="S">S
-                           <input type="radio" id="S" naSe="size" class="size" value="S">
-                        </label>
-                     </div>
+                  
                      <div class="product__details__option__color">
                         <span>Màu:</span>
                         <label class="c-1" for="sp-1">

@@ -106,7 +106,7 @@ CREATE TABLE `orders` (
   `transaction_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
   `qty` tinyint(4) DEFAULT NULL,
-  `size` varchar(100) NOT NULL,
+  `size` varchar(100) NULL,
   `color` varchar(100) NOT NULL,
   `price` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
@@ -322,15 +322,15 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`id`, `amount`, `users_id`, `name`, `email`, `phone`, `address`, `status`, `payment_method`, `created_at`, `updated_at`) VALUES
-(83, 915000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 0, 2, '2023-06-08 11:13:17', '2023-07-15 15:57:20'),
-(84, 270750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 0, 2, '2023-06-08 11:14:18', '2023-07-15 15:57:22'),
-(85, 270750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 2, '2023-06-08 11:14:29', '2023-07-15 15:57:59'),
-(86, 0, 33, 'Organic Water', 'admin1@gmail.com', '0778960422', 'Hà Nội', 2, 1, '2023-06-12 01:50:50', '2023-07-15 15:57:30'),
-(87, 610000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2023-06-12 01:51:13', '2023-06-12 01:51:27'),
-(88, 305000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2023-05-22 18:15:57', '2023-07-15 11:20:32'),
-(89, 0, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 1, '2023-06-30 15:28:50', '2023-07-15 15:41:26'),
-(90, 0, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2023-06-30 15:28:52', '2023-07-15 15:38:44'),
-(91, 860750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 1, '2023-07-15 12:02:32', '2023-07-15 15:35:30');
+(83, 915000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 0, 2, '2025-06-08 11:13:17', '2025-07-15 15:57:20'),
+(84, 270750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 0, 2, '2025-06-08 11:14:18', '2025-07-15 15:57:22'),
+(85, 270750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 2, '2025-06-08 11:14:29', '2025-07-15 15:57:59'),
+(86, 0, 33, 'Organic Water', 'admin1@gmail.com', '0778960422', 'Hà Nội', 2, 1, '2023-06-12 01:50:50', '2025-07-15 15:57:30'),
+(87, 610000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2025-06-12 01:51:13', '2025-06-12 01:51:27'),
+(88, 305000, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2025-05-22 18:15:57', '2025-07-15 11:20:32'),
+(89, 0, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 1, '2025-06-30 15:28:50', '2025-07-15 15:41:26'),
+(90, 0, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 1, 1, '2025-06-30 15:28:52', '2025-07-15 15:38:44'),
+(91, 860750, 33, 'Organic Water', 'thong.phan109@gmail.com', '0778960401', 'K123/14 Đỗ Thúc Tịnh', 2, 1, '2025-07-15 12:02:32', '2025-07-15 15:35:30');
 
 -- --------------------------------------------------------
 
