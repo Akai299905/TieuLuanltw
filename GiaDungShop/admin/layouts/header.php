@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Oganic Shop Admin</title>
-    <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>/public/admin/images/logos/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>/public/admin/images/logos/logoiconadmin.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>/public/admin/css/styles.min.css" />
     <link rel="stylesheet" href="<?php echo base_url() ?>/public/admin/css/image-uploader.css" />
@@ -20,7 +20,7 @@
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
                     <a href="<?= base_url() ?>./admin" class="text-nowrap logo-img">
-                        <img src="<?php echo base_url() ?>/public/admin/images/logos/dark-logo.svg" width="180" alt="" />
+                        <img src="<?php echo base_url() ?>/public/admin/images/logos/logoadmin1.png" width="180" alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
