@@ -191,7 +191,7 @@
   fetchPayment();
 
   $(document).on('click', '.addToCart', function () {
-    var size = $(".size:checked").val();
+    var size = null;
     var color = $(".color:checked").val();
     var qty = $('.cart-qty').val();
     var id = $('.id').val();
@@ -199,27 +199,7 @@
     var name = $('.name').val();
     var product_number = $('.product-number').val();
     var price = $('.price-cart').val();
-    if (size == null) {
-      var toastMixin = Swal.mixin({
-        toast: true,
-        icon: 'error',
-        title: 'General Title',
-        animation: false,
-        position: 'bottom',
-        showConfirmButton: false,
-        timer: 1000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      });
-      toastMixin.fire({
-        animation: true,
-        title: 'Vui lòng chọn size áo !!!'
-      });
-      return;
-    }
+
     if (color == null) {
       var toastMixin = Swal.mixin({
         toast: true,
@@ -383,7 +363,7 @@
                             <h6>' + products[i].name + '</h6>\
                             <div class="d-flex align-items-center">\
                               <h5 class="price-ajax">' + formatNumber(products[i].price) + 'đ</h5>\
-                              <span class="ml-3">(Size: ' + products[i].size + ', Color: ' + products[i].color + ')</span>\
+                              <span class="ml-3">(Color: ' + products[i].color + ')</span>\
                             </div>\
                           </div>\
                         </td>\
