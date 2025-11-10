@@ -108,7 +108,7 @@ if (getInput('keywork') != '') {
 				<div class="col-lg-6 col-md-6">
 					<nav class="header__menu mobile-menu">
 						<ul>
-							<li class="active"><a href="index.php">Trang chủ</a></li>
+							<li ><a href="index.php">Trang chủ</a></li>
 							<li><a href="timkiem.php?keyword=">Cửa hàng</a></li>
 							<!-- <li><a href="./blog.html">Bài vết</a></li> -->
 							<li><a href="feedback.php">Phản hồi</a></li>
