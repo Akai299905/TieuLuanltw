@@ -50,10 +50,10 @@
 			<div class="col-lg-7 offset-lg-4">
 				<div class="banner__item">
 					<div class="banner__item__pic">
-						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-1.jpg" alt="">
+						<img src="<?php echo base_url() ?>public/frontend/img/banner/dodunggiadinh.jpg" alt="">
 					</div>
 					<div class="banner__item__text">
-						<h2>Clothing Collections 2030</h2>
+						<h2>Đồ dùng gia đình</h2>
 						<a href="#">Mua ngay</a>
 					</div>
 				</div>
@@ -61,10 +61,10 @@
 			<div class="col-lg-5">
 				<div class="banner__item banner__item--middle">
 					<div class="banner__item__pic">
-						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-2.jpg" alt="">
+						<img src="<?php echo base_url() ?>public/frontend/img/banner/phukien.jpg" alt="">
 					</div>
 					<div class="banner__item__text">
-						<h2>Accessories</h2>
+						<h2>Phụ kiện</h2>
 						<a href="#">Mua ngay</a>
 					</div>
 				</div>
@@ -72,10 +72,10 @@
 			<div class="col-lg-7">
 				<div class="banner__item banner__item--last">
 					<div class="banner__item__pic">
-						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-3.jpg" alt="">
+						<img src="<?php echo base_url() ?>public/frontend/img/banner/dodungtienit.jpg" alt="">
 					</div>
 					<div class="banner__item__text">
-						<h2>Shoes Spring 2030</h2>
+						<h2>Đồ dùng tiện ít</h2>
 						<a href="#">Mua ngay</a>
 					</div>
 				</div>
