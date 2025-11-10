@@ -420,7 +420,7 @@
         var res = JSON.parse(res);
         localStorage.removeItem('cart');
         if (res.code === 200) {
-          window.open('http://localhost/FashionShop/thanh-toan-momo.php');
+          window.open('http://localhost:8012/GiaDungShop/thanh-toan-momo.php');
         }
       }
     });

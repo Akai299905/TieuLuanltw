@@ -58,7 +58,7 @@ require_once __DIR__ . "/autoload/autoload.php";
             <li>Tổng tiền <span class="total-money"></span></li>
           </ul>
           <a href="thanh-toan.php" class="primary-btn">Thanh toán khi nhận hàng</a>
-          <a href="thanh-toan-momo.php" class="primary-btn mt-2 w-100">Thanh toán trực tuyến</a>
+          <button type="button" class="primary-btn mt-2 w-100" id="momo">Thanh toán trực tuyến</button>
         </div>
       </div>
     </div>
