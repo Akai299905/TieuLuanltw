@@ -101,7 +101,7 @@
     function base_url()
     {
 
-        return $url  = "http://localhost:8012/GiaDungShop/";
+        return $url  = "http://localhost/GiaDungShop/";
     }
 
 

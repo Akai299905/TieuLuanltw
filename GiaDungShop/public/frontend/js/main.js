@@ -217,7 +217,7 @@
       });
       toastMixin.fire({
         animation: true,
-        title: 'Vui lòng chọn màu áo !!!'
+        title: 'Vui lòng chọn màu sản phẩm !!!'
       });
       return;
     }
