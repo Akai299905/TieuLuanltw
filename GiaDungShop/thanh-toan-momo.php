@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/autoload/autoload.php";
+session_start();
 header('Content-type: text/html; charset=utf-8');
 
 
@@ -40,8 +41,8 @@ $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
 $orderInfo = "Thanh toán qua MoMo";
 $amount = $price;
 $orderId = time() . "";
-$redirectUrl = "http://localhost/FashionShop/response-thanh-toan.php";
-$ipnUrl = "http://localhost/FashionShop/response-thanh-toan.php";
+$redirectUrl = "http://localhost/GiaDungShop/response-thanh-toan.php";
+$ipnUrl = "http://localhost/GiaDungShop/response-thanh-toan.php";
 $extraData = "";
 
 $requestId = time() . "";
